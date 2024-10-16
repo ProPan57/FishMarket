@@ -1,56 +1,16 @@
-﻿{% load static %}
+﻿{% extends 'core/base.html'%}
+{% load static %}
 
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% block breadcrumbs %}
+Fish Market
+{% endblock %}
 
-    <title>Fish Market</title>
+{% block title %}
+ Главная
+{% endblock %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'core/css/lib/colors.css' %}">
-    <link rel="stylesheet" href="{% static 'core/css/src/global.css' %}">
-    <link rel="stylesheet" href="{% static 'core/css/lib/blocks.css' %}">
-    <link rel="stylesheet" href="{% static 'core/css/lib/text.css' %}">
-    <link rel="stylesheet" href="{% static 'core/css/src/media.css' %}">
-</head>
-
-<body class="body">
-    <header class="header">
-        <div class="header__inner">
-            <img class="logo" src="img/logo/logo_normal.png" alt="Логотип">
-
-            <nav class="nav">
-                <ul class="nav__menu">
-                    <li class="nav-menu__item text-big text-white">
-                        <a href="" class="no-link">О нас</a>
-                    </li>
-                    <li class="nav-menu__item text-big text-white">
-                        <a href="" class="no-link">Акции</a>
-                    </li>
-                    <li class="nav-menu__item text-big text-white">
-                        <a href="" class="no-link">Магазин</a>
-                    </li>
-                    <li class="nav-menu__item text-big text-white">
-                        <a href="" class="no-link">Корзина</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="breadcrumbs">
-        <p class="breadcrumbs__inner text-normal">
-            Fish Market
-        </p>
-    </div>
-
-    <main class="main">
+{% block main %}
         <div class="block block-yellow-15 block-title text-big">
             Добро пожаловать в Fish Market, ваш уютный уголок морских приключений!
         </div>
@@ -73,7 +33,7 @@
         <div class="block block-fish__wrapper text-normal">
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_1.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_1.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Петушки</h2>
 
@@ -86,7 +46,7 @@
             </div>
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_2.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_2.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Скалярии</h2>
 
@@ -98,7 +58,7 @@
             </div>
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_3.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_3.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Барбусы</h2>
 
@@ -110,7 +70,7 @@
             </div>
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_4.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_4.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Данио</h2>
 
@@ -121,7 +81,7 @@
             </div>
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_5.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_5.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Анциструс</h2>
 
@@ -133,7 +93,7 @@
             </div>
 
             <div class="block-fish block-orange-20">
-                <img class="block-fish__image" src="img/fish/fish_6.png" alt="Петушки - красный и золотой">
+                <img class="block-fish__image" src="{% static 'core/img/fish/fish_6.png' %}" alt="Петушки - красный и золотой">
 
                 <h2 class="block-fish__title">Тернеция</h2>
 
@@ -165,7 +125,7 @@
         </div>
 
         <div class="block block-magic block-yellow-15 text-normal">
-            <img class="block-magic__image" src="img/fish/fish_7.png" alt="Рыба волшебная">
+            <img class="block-magic__image" src="{% static 'core/img/fish/fish_7.png' %}" alt="Рыба волшебная">
 
             <div class="block-magic__text">
                 <h2 class="block-magic-text__title">Золотоспинный Фернунд</h2>
@@ -202,7 +162,7 @@
         </div>
 
         <div class="block block-magic block-yellow-15 text-normal">
-            <img class="block-magic__image" src="img/fish/fish_8.png" alt="Рыба волшебная">
+            <img class="block-magic__image" src="{% static 'core/img/fish/fish_8.png' %}" alt="Рыба волшебная">
 
             <div class="block-magic__text">
                 <h2 class="block-magic-text__title">Шаркодельфин Коралловый</h2>
@@ -240,7 +200,7 @@
         </div>
 
         <div class="block block-magic block-yellow-15 text-normal">
-            <img class="block-magic__image" src="img/fish/fish_9.png" alt="Рыба волшебная">
+            <img class="block-magic__image" src="{% static 'core/img/fish/fish_9.png' %}" alt="Рыба волшебная">
 
             <div class="block-magic__text">
                 <h2 class="block-magic-text__title">Аквалуна</h2>
@@ -276,22 +236,4 @@
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__inner">
-            <img class="logo" src="img/logo/logo_normal.png" alt="Логотип">
-
-            <p class="text-normal text-white text-center">
-                Основано в 2024 году<br>
-                Все права защищены<br>
-                by SergoIndustries with Love
-            </p>
-
-            <nav class="footer__nav text-normal text-white text-right">
-                О нас  /  Акции  /  Магазин  /  Корзина
-            </nav>
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}
